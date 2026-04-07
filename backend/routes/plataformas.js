@@ -5,7 +5,7 @@ const { body, validationResult } = require('express-validator'); // libreria par
 
 // READ - GET --> Obtener todas las plataformas
 router.get('/', (req, res) => {
-    db.all('SELECT * FROM plataformas', [], (err, rows) => {
+    db.all('SELECT * FROM plataforma', [], (err, rows) => {
         if (err) {
             console.error('Error al obtener las plataformas:', err.message);
             res.status(500).json({ error: err.message });
@@ -27,7 +27,7 @@ router.post('/',
         }
 
         const { nombre, fabricante } = req.body;      
-        db.run("INSERT INTO plataformas (nombre, fabricante) VALUES (?, ?)", [nombre, fabricante], function(err) {
+        db.run("INSERT INTO plataforma (nombre, fabricante) VALUES (?, ?)", [nombre, fabricante], function(err) {
             if (err) {
                 return res.status(500).json({ error: err.message });
             }
@@ -49,7 +49,7 @@ router.put('/:id',
 
         const { id } = req.params;
         const { nombre, fabricante } = req.body;
-        db.run("UPDATE plataformas SET nombre = ?, fabricante = ? WHERE id =?", [nombre, fabricante, id], function(err) {
+        db.run("UPDATE plataforma SET nombre = ?, fabricante = ? WHERE id =?", [nombre, fabricante, id], function(err) {
             if (err) {
                 return res.status(500).json({ error: err.message });
             }
@@ -64,7 +64,7 @@ router.put('/:id',
 // DELETE  --> Eliminar una plataforma existente
 router.delete('/:id', (req, res) => {
     const { id } = req.params;
-    db.run("DELETE FROM plataformas WHERE id = ?", [id], function(err) {
+    db.run("DELETE FROM plataforma WHERE id = ?", [id], function(err) {
         if (err) {
             return res.status(500).json({ error: err.message });
         }

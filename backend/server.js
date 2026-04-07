@@ -19,5 +19,5 @@ app.listen(PORT, () => {
 
 // Rutas de plataformas
 const plataformasRoutes = require ('./routes/plataformas');
-app.use('/api/plataformas', plataformasRoutes);
+app.use('/api/plataforma', plataformasRoutes);
 
