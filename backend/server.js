@@ -16,3 +16,8 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor arrancado en http://localhost:${PORT}`);
 });
+
+// Rutas de plataformas
+const plataformasRoutes = require ('./routes/plataformas');
+app.use('/api/plataformas', plataformasRoutes);
+
