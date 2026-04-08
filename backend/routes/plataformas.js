@@ -31,7 +31,7 @@ router.post('/',
             if (err) {
                 return res.status(500).json({ error: err.message });
             }
-            res.json({ id: this.lastID, nombre, fabricante });
+            res.status(201).json({ id: this.lastID, nombre, fabricante });
         });
     }
 );
