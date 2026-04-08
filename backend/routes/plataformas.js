@@ -68,6 +68,12 @@ router.delete('/:id', (req, res) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
+
+        // Si no se eliminó ningún registro, la plataforma no existe
+        if (this.changes === 0) {
+            return res.status(404).json({ error: 'Plataforma no encontrada' });
+        }
+
         res.json({ message: 'Plataforma eliminada correctamente' });
     });
 });
