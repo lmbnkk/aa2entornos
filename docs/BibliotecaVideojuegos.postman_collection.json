@@ -1,0 +1,236 @@
+{
+  "info": {
+    "_postman_id": "3c1cd397-eefe-459b-b6a5-394fbc38435c",
+    "name": "BibliotecaVideojuegos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52672403",
+    "_collection_link": "https://go.postman.co/collection/52672403-3c1cd397-eefe-459b-b6a5-394fbc38435c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "READ videojuego",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/videojuego",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "videojuego"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CREATE videojuego",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"titulo\": \"Resident Evil\",\r\n\"genero\": \"Terror\",\r\n\"imagen_url\": \"\",\r\n\"plataforma_id\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/videojuego",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "videojuego"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE videojuego",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"titulo\": \"Resident Evil Origins\",\r\n\"genero\": \"Terror\",\r\n\"imagen_url\": \"\",\r\n\"plataforma_id\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/videojuego/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "videojuego",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE videojuego",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/videojuego/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "videojuego",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "READ plataforma",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/plataforma",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "plataforma"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CREATE plataforma",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Steam\",\r\n    \"fabricante\": \"Valve\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/plataforma",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "plataforma"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE plataforma",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Steam\",\r\n    \"fabricante\": \"Valve\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/plataforma/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "plataforma",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE plataforma",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Steam\",\r\n    \"fabricante\": \"Valve\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/plataforma/5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "plataforma",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
