@@ -21,3 +21,6 @@ app.listen(PORT, () => {
 const plataformasRoutes = require ('./routes/plataformas');
 app.use('/api/plataforma', plataformasRoutes);
 
+// Rutas de videojuegos
+const videojuegosRoutes = require ('./routes/videojuegos');
+app.use('/api/videojuego', videojuegosRoutes);
