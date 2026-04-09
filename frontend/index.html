@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Videojuegos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <h1>Gestión de Plataformas</h1>
+
+    <h2>Añadir Nueva Plataforma</h2>
+    <form id="formPlataforma">
+        <input type="hidden" id="plataformaId"> <!-- Campo oculto para saber el ID de la plataforma al editar -->
+
+        <input type="text" id="nombre" placeholder="Nombre (mín. 3 caracteres)" required>
+        <input type="text" id="fabricante" placeholder="Fabricante">
+
+        <div class="form-actions">
+            <button type="submit" id="btnGuardar">Guardar Plataforma</button>
+            <button type="button" id="btnCancelar" style="display:none" onclick="limpiarFormulario()">Cancelar</button>
+        </div>
+    </form>
+    <p id="mensajeError" style="color: red;"></p>
+
+    <button id="btnUpload">Ver plataformas</button>
+
+    <div id="container">
+        <ul id="platformList"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
