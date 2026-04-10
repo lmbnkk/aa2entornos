@@ -27,13 +27,16 @@ Para iniciar el servidor de la API ejecutar: 
 node backend/server.js
 ```
 
-### 4. Configurar Frontend
-PENDIENTE
+### 4. Frontend
+Se compone de: index.html, style.css, app.js.
+
+1. Abre en tu navegador: `frontend/index.html`.
+2. Para que funcionen las peticiones, el backend debe estar iniciado en el puerto 3000.
 
 ## Estructura del proyecto
 * **README.md**: Instrucciones del proyecto
-* **/backend**: Lógica del servidor, datos y API
-* **/frontend**: PENDIENTE DE IMPLEMENTACIÓN
+* **/backend**: Express, base de datos SQLite y rutas API
+* **/frontend**: Interfaz HTML5, CSS3 y JS
 * **/docs**: Colección Postman
 
 ## Documentación de la API

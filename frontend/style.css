@@ -28,6 +28,32 @@ button {
     transition: 0.3s;
 }
 
+.btn-listado {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: #444444; 
+    color: #ffffff;
+    border: 1px solid #555555;
+    font-weight: bold;
+    width: 200px;
+}
+
+.btn-listado:hover {
+    background-color: #555555;
+    border-color: #666666;
+}
+
+#btnCancelar, #btnCancelarJuego {
+    display: none; /* oculto */
+}
+
+#mensajeError, #mensajeErrorJuego {
+    color: #ff4d4d;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
 .form-actions {
     display: flex;
     gap: 10px;
@@ -78,4 +104,15 @@ form {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+}
+
+.acciones {
+    display: flex;
+    gap: 8px; /* Espacio entre los botones de la lista */
+}
+
+/* Evita que los botones de la lista hereden el 'display: block' que centra todo */
+li button {
+    margin: 0; 
+    display: inline-block;
 }

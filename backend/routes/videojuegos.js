@@ -5,7 +5,7 @@ const { body, validationResult } = require('express-validator'); // libreria par
 
 // READ - GET --> Obtener todos los videojuegos
 router.get('/', (req, res) => {
-    db.all('SELECT * FROM videojuego', [], (err, rows) => {
+    db.all('SELECT videojuego.*, plataforma.nombre AS plataforma_nombre FROM videojuego LEFT JOIN plataforma ON videojuego.plataforma_id = plataforma.id', [], (err, rows) => {
         if (err) {
             console.error('Error al obtener los videojuegos:', err.message);
             res.status(500).json({ error: err.message });
