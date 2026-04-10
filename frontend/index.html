@@ -10,55 +10,62 @@
 </head>
 
 <body>
-    <h1>Gestión de Plataformas</h1>
-
-    <h2 id="tituloFormPlataforma">Añadir Nueva Plataforma</h2>
-    <form id="formPlataforma">
-        <input type="hidden" id="plataformaId"> <!-- Campo oculto para saber el ID de la plataforma al editar -->
-        <input type="text" id="nombre" placeholder="Nombre (mín. 3 caracteres)" required>
-        <input type="text" id="fabricante" placeholder="Fabricante">
-
-        <p id="mensajeError"></p>
-
-        <div class="form-actions">
-            <button type="submit" id="btnGuardar">Guardar Plataforma</button>
-            <button type="button" id="btnCancelar" onclick="limpiarFormulario()">Cancelar</button>
-        </div>
-    </form>
-
-
-    <button id="btnUpload" class="btn-listado">Ver plataformas</button>
-
-    <div id="container">
-        <ul id="platformList"></ul>
-    </div>
-
+    <h1>BIBLIOTECA DE VIDEOJUEGOS</h1>
     <hr>
-    <h1>Gestión de Videojuegos</h1>
+    <div class="dashboard">
+        <section class="column">
+            <h1>Gestión de Plataformas</h1>
 
-    <h2 id="tituloFormVideojuego">Añadir Nuevo Videojuego</h2>
-    <form id="formVideojuego">
-        <input type="hidden" id="videojuegoId">
-        <input type="text" id="titulo" placeholder="Título (mín. 3 caracteres)" required>
-        <input type="text" id="genero" placeholder="Género (mín. 3 caracteres)" required>
-        <input type="text" id="imagen_url" placeholder="URL de la imagen (opcional)">
+            <h2 id="tituloFormPlataforma">Añadir Nueva Plataforma</h2>
+            <form id="formPlataforma">
+                <input type="hidden" id="plataformaId">
+                <!-- Campo oculto para saber el ID de la plataforma al editar -->
+                <input type="text" id="nombre" placeholder="Nombre (mín. 3 caracteres)" required>
+                <input type="text" id="fabricante" placeholder="Fabricante">
 
-        <select id="selectPlataforma" required>
-            <option value="">Selecciona una plataforma...</option>
-        </select>
+                <p id="mensajeError"></p>
 
-        <p id="mensajeErrorJuego"></p>
-
-        <div class="form-actions">
-            <button type="submit" id="btnGuardarJuego">Guardar Videojuego</button>
-            <button type="button" id="btnCancelarJuego" onclick="limpiarFormularioVideojuego()">Cancelar</button>
-        </div>
-    </form>
+                <div class="form-actions">
+                    <button type="submit" id="btnGuardar">Guardar Plataforma</button>
+                    <button type="button" id="btnCancelar" onclick="limpiarFormulario()">Cancelar</button>
+                </div>
+            </form>
 
 
-    <button id="btnCargarJuegos" class="btn-listado">Ver Videojuegos</button>
-    <ul id="videojuegosList"></ul>
+            <button id="btnUpload" class="btn-listado">Ver plataformas</button>
 
+            <div id="container">
+                <ul id="platformList"></ul>
+            </div>
+        </section>
+        <section class="column">
+            <h1>Gestión de Videojuegos</h1>
+
+            <h2 id="tituloFormVideojuego">Añadir Nuevo Videojuego</h2>
+            <form id="formVideojuego">
+                <input type="hidden" id="videojuegoId">
+                <input type="text" id="titulo" placeholder="Título (mín. 3 caracteres)" required>
+                <input type="text" id="genero" placeholder="Género (mín. 3 caracteres)" required>
+                <input type="text" id="imagen_url" placeholder="URL de la imagen (opcional)">
+
+                <select id="selectPlataforma" required>
+                    <option value="">Selecciona una plataforma...</option>
+                </select>
+
+                <p id="mensajeErrorJuego"></p>
+
+                <div class="form-actions">
+                    <button type="submit" id="btnGuardarJuego">Guardar Videojuego</button>
+                    <button type="button" id="btnCancelarJuego"
+                        onclick="limpiarFormularioVideojuego()">Cancelar</button>
+                </div>
+            </form>
+
+
+            <button id="btnCargarJuegos" class="btn-listado">Ver Videojuegos</button>
+            <ul id="videojuegosList"></ul>
+        </section>
+    </div>
     <script src="app.js"></script>
 </body>
 
