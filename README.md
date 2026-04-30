@@ -40,7 +40,7 @@ Se compone de: index.html, style.css, app.js.
 * **/docs**: Colección Postman
 
 ## Documentación de la API
-En la Wiki del repositorio (https://github.com/lmbnkk/aa2entornos/wiki), se encuentra detallado los endpoints de Plataformas y Videojuegos.
+En la Wiki del repositorio (https://github.com/lmbnkk/aa2entornos/wiki/Documentaci%C3%B3n-API), se encuentra detallado los endpoints de Plataformas y Videojuegos.
 
 ## Gestión del proyecto
 Se ha utilizado según la metodología de flujo de trabajo por ramas en GitHub. Cada funcionalidad o corrección se ha gestionado en ramas independientes fusionandola una vez terminada a la rama principal mediante Pull Request.
